@@ -1,0 +1,59 @@
+{
+    "name": "desk",
+    "display": "Desk.com",
+    "description": "Consumes incoming notification messages and creates Desk.com cases from them",
+    "icon_url": "desk.png",
+    "help": "http://guides.spreecommerce.com/integration/desk_integration.html",
+    "services": [
+        {
+            "name": "import",
+            "path": "/import",
+            "description": "Import new notifications to Desk.",
+            "requires": {
+                "parameters": [
+                    {
+                        "name": "url",
+                        "description": "Destination Desk URL"
+                    },
+                    {
+                        "name": "username",
+                        "description": "Desk Username/Email"
+                    },
+                    {
+                        "name": "password",
+                        "description": "Desk Login Password"
+                    },
+                    {
+                        "name": "requester_name",
+                        "description": "The name that goes in the from field on the Desk case"
+                    },
+                    {
+                        "name": "requester_email",
+                        "description": "The email that goes in the from field on the Desk case"
+                    },
+                    {
+                        "name": "to_email",
+                        "description": "The email the new case will be forwarded to"
+                    }
+                ],
+                "humanizers": {
+                    "200": "Message was imported to Desk.",
+                    "500": "Message could not be imported to Desk."
+                }
+            },
+            "recommends": {
+                "messages": [ "notification:warn", "notification:error", "notification:info" ],
+                "filters": [
+                    {
+                        "path": "message",
+                        "operator": "contains",
+                        "value": "((notification:error)|(notification:warn)|(notification:info))"
+                    }
+                ],
+                "options": {
+                    "retries_allowed": true
+                }
+            }
+        }
+    ]
+}
