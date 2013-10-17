@@ -1,7 +1,5 @@
 require 'endpoint_base'
-require 'pry'
-
-Dir['./lib/*.rb'].each { |f| require f }
+require_relative './lib/client'
 
 class DeskEndpoint < EndpointBase
   helpers Sinatra::JSON

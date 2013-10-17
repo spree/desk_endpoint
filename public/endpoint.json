@@ -42,12 +42,12 @@
                 }
             },
             "recommends": {
-                "messages": [ "notification:warn", "notification:error", "notification:info" ],
+                "messages": [ "notification:warn", "notification:error" ],
                 "filters": [
                     {
                         "path": "message",
                         "operator": "contains",
-                        "value": "((notification:error)|(notification:warn)|(notification:info))"
+                        "value": "((notification:error)|(notification:warn))"
                     }
                 ],
                 "options": {

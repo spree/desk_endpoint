@@ -16,7 +16,7 @@ class Client
       body: case_params.to_json,
       basic_auth: auth
     }
-    self.class.post("#{config['desk.url']}/cases", options)
+    self.class.post("#{config['desk.url']}/api/v2/cases", options)
   end
 
   def case_params

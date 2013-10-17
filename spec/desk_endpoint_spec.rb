@@ -16,7 +16,7 @@ describe DeskEndpoint do
   params = [
       { 'name' => 'desk.username', 'value' => 'user@spreecommerce.com' },
       { 'name' => 'desk.password', 'value' => 'foobar' },
-      { 'name' => 'desk.url', 'value' => 'https://spreecommerce.desk.com/api/v2' },
+      { 'name' => 'desk.url', 'value' => 'https://spreecommerce.desk.com' },
       { 'name' => 'desk.requester_name', 'value' => 'Spree Integrator' },
       { 'name' => 'desk.requester_email', 'value' => 'support@spreecommerce.com' },
       { 'name' => 'desk.to_email', 'value' => 'user@spreecommerce.com' } ]

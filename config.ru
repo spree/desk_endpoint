@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'bundler'
-Bundler.setup
+
+Bundler.require(:default)
 require "./desk_endpoint"
 
 run DeskEndpoint
