@@ -20,3 +20,5 @@ group :production do
   gem 'foreman'
   gem 'unicorn'
 end
+
+gem 'pry', group: :development

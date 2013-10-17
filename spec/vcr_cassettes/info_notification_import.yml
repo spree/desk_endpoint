@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://user%40spreecommerce.com:foobar@spreecommerce.desk.com/api/v2/cases
+    body:
+      encoding: UTF-8
+      string: '{"type":"email","subject":"Order Received","message":{"direction":"in","to":"user@spreecommerce.com","from":"Spree
+        Integrator (support@spreecommerce.com)","subject":"Order Received","body":"You
+        have received an order."},"_links":{"customer":{"href":"/api/v2/customers/124271370","class":"customer"}}}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Accept-Ranges:
+      - bytes
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 17 Oct 2013 16:33:09 GMT
+      Etag:
+      - '"7acfc536ec9515569e4f3532dbc6f44a"'
+      Location:
+      - https://spreecommerce.desk.com/api/v2/cases/11
+      Status:
+      - 201 Created
+      Vary:
+      - X-AppVersion
+      X-Appversion:
+      - '11.9'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '60'
+      X-Rate-Limit-Remaining:
+      - '59'
+      X-Rate-Limit-Reset:
+      - '52'
+      X-Request-Id:
+      - eafa1d06325d6507a8f1a183a82a9323
+      Content-Length:
+      - '792'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"external_id":null,"subject":"Order Received","priority":4,"locked_until":null,"description":null,"status":"new","type":"email","labels":[],"language":"en","active_at":null,"created_at":"2013-10-17T16:33:08Z","updated_at":"2013-10-17T16:33:08Z","received_at":"2013-10-17T16:33:08Z","custom_fields":{},"_links":{"self":{"href":"/api/v2/cases/11","class":"case"},"message":{"href":"/api/v2/cases/11/message","class":"email"},"customer":{"href":"/api/v2/customers/124271370","class":"customer"},"assigned_user":null,"assigned_group":{"href":"/api/v2/groups/365542","class":"group"},"locked_by":null,"replies":{"href":"/api/v2/cases/11/replies","class":"reply"},"notes":{"href":"/api/v2/cases/11/notes","class":"note"},"attachments":{"href":"/api/v2/cases/11/attachments","class":"attachment"}}}'
+    http_version: 
+  recorded_at: Thu, 17 Oct 2013 16:33:11 GMT
+recorded_with: VCR 2.6.0

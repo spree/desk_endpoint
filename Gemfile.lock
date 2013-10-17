@@ -144,6 +144,7 @@ DEPENDENCIES
   foreman
   guard-rspec
   httparty
+  pry
   rack-test
   rb-fsevent (~> 0.9.1)
   rspec (= 2.11.0)

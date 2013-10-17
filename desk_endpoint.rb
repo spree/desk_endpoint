@@ -1,4 +1,5 @@
 require 'endpoint_base'
+require 'pry'
 
 Dir['./lib/*.rb'].each { |f| require f }
 
@@ -7,12 +8,11 @@ class DeskEndpoint < EndpointBase
 
   post '/import' do
     begin
-      client = Client.new(@config)
-      import = Import.new(client.fetch, @message[:message], @message[:payload], @config)
-      ticket = import.ticket
+      client = Client.new(@config, @message[:message], @message[:payload])
+      new_case = client.import
       code = 200
-      # result = { "message_id" => @message[:message_id], "notifications" => [ { "level" => "info",
-      #   "subject" => "Help ticket created", "description" => "New Zendesk ticket number #{ticket.id} created, priority: #{ticket.priority}." } ] }
+      result = { "message_id" => @message[:message_id], "notifications" => [ { "level" => "info",
+        "subject" => "Case created", "description" => "New Desk case '#{new_case['subject']}' created, priority: #{new_case['priority']}." } ] }
     rescue Exception => e
       code = 500
       result = { "error" => e.message, "trace" => e.backtrace.inspect }
