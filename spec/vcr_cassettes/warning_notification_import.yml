@@ -1,13 +1,61 @@
 ---
 http_interactions:
 - request:
+    method: get
+    uri: https://user%40spreecommerce.com:foobar@spreecommerce.desk.com/api/v2/customers/search
+    body:
+      encoding: UTF-8
+      string: '{"email":"hub2@spreecommerce.com"}'
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Accept-Ranges:
+      - bytes
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 18 Oct 2013 14:14:48 GMT
+      Etag:
+      - '"654884bdeacf57a86e21fc1d9dc2338c"'
+      Status:
+      - 200 OK
+      Vary:
+      - X-AppVersion
+      X-Appversion:
+      - '11.9'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '60'
+      X-Rate-Limit-Remaining:
+      - '57'
+      X-Rate-Limit-Reset:
+      - '12'
+      X-Request-Id:
+      - 024e8d8829059fd180c1566160496e95
+      Content-Length:
+      - '986'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"total_entries":1,"_links":{"self":{"href":"/api/v2/customers/search?email=hub2%40spreecommerce.com&page=1&per_page=20","class":"page"},"first":{"href":"/api/v2/customers/search?email=hub2%40spreecommerce.com&page=1&per_page=20","class":"page"},"last":{"href":"/api/v2/customers/search?email=hub2%40spreecommerce.com&page=1&per_page=20","class":"page"},"previous":null,"next":null},"_embedded":{"entries":[{"first_name":"Spree
+        Commerce","last_name":"Hub","company":"spreecommerce.com","title":null,"external_id":null,"background":null,"language":null,"locked_until":null,"created_at":"2013-10-18T14:11:30Z","updated_at":"2013-10-18T14:12:02Z","custom_fields":{},"emails":[{"type":"work","value":"hub2@spreecommerce.com"}],"phone_numbers":[],"addresses":[],"_links":{"self":{"href":"/api/v2/customers/124505162","class":"customer"},"locked_by":null,"company":{"href":"/api/v2/companies/9163384","class":"company"},"cases":{"href":"/api/v2/customers/124505162/cases","class":"case"}}}]}}'
+    http_version: 
+  recorded_at: Fri, 18 Oct 2013 14:14:49 GMT
+- request:
     method: post
     uri: https://user%40spreecommerce.com:foobar@spreecommerce.desk.com/api/v2/cases
     body:
       encoding: UTF-8
       string: '{"type":"email","subject":"Item out of stock","message":{"direction":"in","to":"user@spreecommerce.com","from":"Spree
         Integrator (support@spreecommerce.com)","subject":"Item out of stock","body":"This
-        products requested in this order are not in stock."},"_links":{"customer":{"href":"/api/v2/customers/124271370","class":"customer"}}}'
+        products requested in this order are not in stock."},"_links":{"customer":{"href":"/api/v2/customers/124505162","class":"customer"}}}'
     headers:
       Content-Type:
       - application/json
@@ -23,11 +71,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 17 Oct 2013 16:32:35 GMT
+      - Fri, 18 Oct 2013 14:14:49 GMT
       Etag:
-      - '"5225bdc11e4078483ff309c1861f9106"'
+      - '"447ab4590ae74b8359e34099f75b5d7a"'
       Location:
-      - https://spreecommerce.desk.com/api/v2/cases/10
+      - https://spreecommerce.desk.com/api/v2/cases/57
       Status:
       - 201 Created
       Vary:
@@ -39,18 +87,18 @@ http_interactions:
       X-Rate-Limit-Limit:
       - '60'
       X-Rate-Limit-Remaining:
-      - '59'
+      - '56'
       X-Rate-Limit-Reset:
-      - '26'
+      - '12'
       X-Request-Id:
-      - d91b4be83be96fae29d878bcb4337460
+      - 216d3156d6ba701f369765aad00cfa1c
       Content-Length:
       - '795'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"external_id":null,"subject":"Item out of stock","priority":4,"locked_until":null,"description":null,"status":"new","type":"email","labels":[],"language":"en","active_at":null,"created_at":"2013-10-17T16:32:34Z","updated_at":"2013-10-17T16:32:34Z","received_at":"2013-10-17T16:32:34Z","custom_fields":{},"_links":{"self":{"href":"/api/v2/cases/10","class":"case"},"message":{"href":"/api/v2/cases/10/message","class":"email"},"customer":{"href":"/api/v2/customers/124271370","class":"customer"},"assigned_user":null,"assigned_group":{"href":"/api/v2/groups/365542","class":"group"},"locked_by":null,"replies":{"href":"/api/v2/cases/10/replies","class":"reply"},"notes":{"href":"/api/v2/cases/10/notes","class":"note"},"attachments":{"href":"/api/v2/cases/10/attachments","class":"attachment"}}}'
+      string: '{"external_id":null,"subject":"Item out of stock","priority":4,"locked_until":null,"description":null,"status":"new","type":"email","labels":[],"language":"en","active_at":null,"created_at":"2013-10-18T14:14:48Z","updated_at":"2013-10-18T14:14:49Z","received_at":"2013-10-18T14:14:48Z","custom_fields":{},"_links":{"self":{"href":"/api/v2/cases/57","class":"case"},"message":{"href":"/api/v2/cases/57/message","class":"email"},"customer":{"href":"/api/v2/customers/124505162","class":"customer"},"assigned_user":null,"assigned_group":{"href":"/api/v2/groups/365542","class":"group"},"locked_by":null,"replies":{"href":"/api/v2/cases/57/replies","class":"reply"},"notes":{"href":"/api/v2/cases/57/notes","class":"note"},"attachments":{"href":"/api/v2/cases/57/attachments","class":"attachment"}}}'
     http_version: 
-  recorded_at: Thu, 17 Oct 2013 16:32:37 GMT
+  recorded_at: Fri, 18 Oct 2013 14:14:50 GMT
 recorded_with: VCR 2.6.0
