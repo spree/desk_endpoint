@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://user%40spreecommerce.com:foobar@spreecommerce.desk.com/api/v2/cases
+    body:
+      encoding: UTF-8
+      string: '{"type":"email","subject":"Invalid China Order","message":{"direction":"in","to":"user@spreecommerce.com","from":"Spree
+        Commerce Hub (support@spreecommerce.com)","subject":"Invalid China Order","body":"This
+        order is shipping to China but was invalidly sent to PCH"},"_links":{"customer":{"href":"/api/v2/customers/124271370","class":"customer"}}}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Accept-Ranges:
+      - bytes
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 18 Oct 2013 15:58:39 GMT
+      Etag:
+      - '"e09e6f7eec1548d9d014ad1ce07ba344"'
+      Location:
+      - https://spreecommerce.desk.com/api/v2/cases/66
+      Status:
+      - 201 Created
+      Vary:
+      - X-AppVersion
+      X-Appversion:
+      - '11.9'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '60'
+      X-Rate-Limit-Remaining:
+      - '59'
+      X-Rate-Limit-Reset:
+      - '21'
+      X-Request-Id:
+      - 5510c4bdeac1e1c9abbe326bd4ca63a2
+      Content-Length:
+      - '797'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"external_id":null,"subject":"Invalid China Order","priority":4,"locked_until":null,"description":null,"status":"new","type":"email","labels":[],"language":"en","active_at":null,"created_at":"2013-10-18T15:58:39Z","updated_at":"2013-10-18T15:58:39Z","received_at":"2013-10-18T15:58:39Z","custom_fields":{},"_links":{"self":{"href":"/api/v2/cases/66","class":"case"},"message":{"href":"/api/v2/cases/66/message","class":"email"},"customer":{"href":"/api/v2/customers/124271370","class":"customer"},"assigned_user":null,"assigned_group":{"href":"/api/v2/groups/365542","class":"group"},"locked_by":null,"replies":{"href":"/api/v2/cases/66/replies","class":"reply"},"notes":{"href":"/api/v2/cases/66/notes","class":"note"},"attachments":{"href":"/api/v2/cases/66/attachments","class":"attachment"}}}'
+    http_version: 
+  recorded_at: Fri, 18 Oct 2013 15:58:41 GMT
+recorded_with: VCR 2.6.0

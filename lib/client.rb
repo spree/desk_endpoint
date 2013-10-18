@@ -21,7 +21,10 @@ class Client
       body: case_params.to_json,
       basic_auth: auth
     }
-    self.class.post("#{config['desk.url']}/api/v2/cases", options)
+    response = self.class.post("#{config['desk.url']}/api/v2/cases", options)
+    if validate_response(response)
+      response
+    end
   end
 
   def get_customer
@@ -30,7 +33,13 @@ class Client
       body: { email: config['desk.customer_email'] }.to_json
     }
     response = self.class.get("#{config['desk.url']}/api/v2/customers/search", options)
-    response["_embedded"]["entries"].first["_links"]["self"]["href"]
+    if validate_response(response)
+      begin
+        response["_embedded"]["entries"].first["_links"]["self"]["href"]
+      rescue Exception => e
+        :customer_not_found
+      end
+    end
   end
 
   def create_customer
@@ -48,10 +57,20 @@ class Client
       }.to_json
     }
     response = self.class.post("#{config['desk.url']}/api/v2/customers", options)
-    response["_links"]["self"]["href"]
+    if validate_response(response)
+      response["_links"]["self"]["href"]
+    end
   end
 
   private
+
+  def validate_response(response)
+    if response['message'].present?
+      raise ApiError, response['message']
+    else
+      true
+    end
+  end
 
   def case_params
     {
@@ -78,10 +97,9 @@ class Client
   end
 
   def get_or_create_customer
-    begin
-      get_customer
-    rescue Exception => e
-      create_customer
-    end
+    customer = get_customer
+    customer == :customer_not_found ? create_customer : customer
   end
 end
+
+class ApiError < StandardError; end

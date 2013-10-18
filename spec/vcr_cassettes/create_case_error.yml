@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://user%40spreecommerce.com:invalid_pass@spreecommerce.desk.com/api/v2/cases
+    body:
+      encoding: UTF-8
+      string: '{"type":"email","subject":"Invalid China Order","message":{"direction":"in","to":"user@spreecommerce.com","from":"Spree
+        Commerce Hub (support@spreecommerce.com)","subject":"Invalid China Order","body":"This
+        order is shipping to China but was invalidly sent to PCH"},"_links":{"customer":{"href":"","class":"customer"}}}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Accept-Ranges:
+      - bytes
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 18 Oct 2013 17:32:47 GMT
+      Status:
+      - 401 Unauthorized
+      Vary:
+      - X-AppVersion
+      Www-Authenticate:
+      - Basic realm="Desk"
+      X-Appversion:
+      - '11.9'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 556b115e789baa35b9ac0e49710084d8
+      Content-Length:
+      - '33'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"message":"Invalid Credentials"}'
+    http_version: 
+  recorded_at: Fri, 18 Oct 2013 17:32:49 GMT
+recorded_with: VCR 2.6.0
