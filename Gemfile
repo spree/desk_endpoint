@@ -1,7 +1,6 @@
 source 'https://www.rubygems.org'
 
 gem 'endpoint_base', :git => 'git@github.com:spree/endpoint_base.git'
-gem 'capistrano'
 gem 'httparty'
 
 group :test do
