@@ -5,7 +5,7 @@ http_interactions:
     uri: https://user%40spreecommerce.com:foobar@spreecommerce.desk.com/api/v2/customers/search
     body:
       encoding: UTF-8
-      string: '{"email":"hub2@spreecommerce.com"}'
+      string: '{"email":null}'
     headers: {}
   response:
     status:
@@ -19,9 +19,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 18 Oct 2013 14:17:27 GMT
+      - Fri, 18 Oct 2013 15:37:50 GMT
       Etag:
-      - '"654884bdeacf57a86e21fc1d9dc2338c"'
+      - '"2c86c8e6decaa22dd82c42efb591b800"'
       Status:
       - 200 OK
       Vary:
@@ -35,19 +35,23 @@ http_interactions:
       X-Rate-Limit-Remaining:
       - '59'
       X-Rate-Limit-Reset:
-      - '33'
+      - '10'
       X-Request-Id:
-      - 0dc711b3c9d7cd769a3b29df1055004b
+      - 693558beeac26cf5f8ed309c00ededfd
       Content-Length:
-      - '986'
+      - '3186'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"total_entries":1,"_links":{"self":{"href":"/api/v2/customers/search?email=hub2%40spreecommerce.com&page=1&per_page=20","class":"page"},"first":{"href":"/api/v2/customers/search?email=hub2%40spreecommerce.com&page=1&per_page=20","class":"page"},"last":{"href":"/api/v2/customers/search?email=hub2%40spreecommerce.com&page=1&per_page=20","class":"page"},"previous":null,"next":null},"_embedded":{"entries":[{"first_name":"Spree
-        Commerce","last_name":"Hub","company":"spreecommerce.com","title":null,"external_id":null,"background":null,"language":null,"locked_until":null,"created_at":"2013-10-18T14:11:30Z","updated_at":"2013-10-18T14:12:02Z","custom_fields":{},"emails":[{"type":"work","value":"hub2@spreecommerce.com"}],"phone_numbers":[],"addresses":[],"_links":{"self":{"href":"/api/v2/customers/124505162","class":"customer"},"locked_by":null,"company":{"href":"/api/v2/companies/9163384","class":"company"},"cases":{"href":"/api/v2/customers/124505162/cases","class":"case"}}}]}}'
+      string: '{"total_entries":5,"_links":{"self":{"href":"/api/v2/customers/search?page=1&per_page=20","class":"page"},"first":{"href":"/api/v2/customers/search?page=1&per_page=20","class":"page"},"last":{"href":"/api/v2/customers/search?page=1&per_page=20","class":"page"},"previous":null,"next":null},"_embedded":{"entries":[{"first_name":"Alex","last_name":"Bard","company":"Desk.com","title":"CEO","external_id":null,"background":"Wowing
+        customer","language":null,"locked_until":null,"created_at":"2013-10-15T13:03:57Z","updated_at":"2013-10-17T16:10:28Z","custom_fields":{},"emails":[{"type":"work","value":"support@desk.com"}],"phone_numbers":[],"addresses":[],"_links":{"self":{"href":"/api/v2/customers/123695819","class":"customer"},"locked_by":null,"company":{"href":"/api/v2/companies/9063134","class":"company"},"cases":{"href":"/api/v2/customers/123695819/cases","class":"case"}}},{"first_name":"Spree
+        Commerce","last_name":"Hub","company":"spreecommerce.com","title":"","external_id":null,"background":"","language":null,"locked_until":null,"created_at":"2013-10-17T16:13:14Z","updated_at":"2013-10-18T14:11:51Z","custom_fields":{},"emails":[{"type":"home","value":"hub@spreecommerce.com"}],"phone_numbers":[],"addresses":[],"_links":{"self":{"href":"/api/v2/customers/124271370","class":"customer"},"locked_by":null,"company":{"href":"/api/v2/companies/9163384","class":"company"},"cases":{"href":"/api/v2/customers/124271370/cases","class":"case"}}},{"first_name":"Spree
+        Commerce","last_name":"Hub","company":"spreecommerce.com","title":null,"external_id":null,"background":null,"language":null,"locked_until":null,"created_at":"2013-10-18T14:09:46Z","updated_at":"2013-10-18T14:09:46Z","custom_fields":{},"emails":[{"type":"work","value":"hub1@spreecommerce.com"}],"phone_numbers":[],"addresses":[],"_links":{"self":{"href":"/api/v2/customers/124504818","class":"customer"},"locked_by":null,"company":{"href":"/api/v2/companies/9163384","class":"company"},"cases":{"href":"/api/v2/customers/124504818/cases","class":"case"}}},{"first_name":"Spree
+        Commerce","last_name":"Hub","company":"spreecommerce.com","title":null,"external_id":null,"background":null,"language":null,"locked_until":null,"created_at":"2013-10-18T14:11:30Z","updated_at":"2013-10-18T14:12:02Z","custom_fields":{},"emails":[{"type":"work","value":"hub2@spreecommerce.com"}],"phone_numbers":[],"addresses":[],"_links":{"self":{"href":"/api/v2/customers/124505162","class":"customer"},"locked_by":null,"company":{"href":"/api/v2/companies/9163384","class":"company"},"cases":{"href":"/api/v2/customers/124505162/cases","class":"case"}}},{"first_name":"Spree
+        Commerce","last_name":"Hub","company":"spreecommerce.com","title":null,"external_id":null,"background":null,"language":null,"locked_until":null,"created_at":"2013-10-18T15:30:49Z","updated_at":"2013-10-18T15:30:49Z","custom_fields":{},"emails":[{"type":"work","value":"hub5@spreecommerce.com"}],"phone_numbers":[],"addresses":[],"_links":{"self":{"href":"/api/v2/customers/124521571","class":"customer"},"locked_by":null,"company":{"href":"/api/v2/companies/9163384","class":"company"},"cases":{"href":"/api/v2/customers/124521571/cases","class":"case"}}}]}}'
     http_version: 
-  recorded_at: Fri, 18 Oct 2013 14:17:28 GMT
+  recorded_at: Fri, 18 Oct 2013 15:37:52 GMT
 - request:
     method: post
     uri: https://user%40spreecommerce.com:foobar@spreecommerce.desk.com/api/v2/cases
@@ -55,7 +59,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"type":"email","subject":"Invalid China Order","message":{"direction":"in","to":"user@spreecommerce.com","from":"Spree
         Integrator (support@spreecommerce.com)","subject":"Invalid China Order","body":"This
-        order is shipping to China but was invalidly sent to PCH"},"_links":{"customer":{"href":"/api/v2/customers/124505162","class":"customer"}}}'
+        order is shipping to China but was invalidly sent to PCH"},"_links":{"customer":{"href":"/api/v2/customers/123695819","class":"customer"}}}'
     headers:
       Content-Type:
       - application/json
@@ -71,11 +75,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 18 Oct 2013 14:17:28 GMT
+      - Fri, 18 Oct 2013 15:37:51 GMT
       Etag:
-      - '"c7dbc793f81acd5a846f5c518fb2cc13"'
+      - '"e54e2bfeb79473ff6ebab03498adbab5"'
       Location:
-      - https://spreecommerce.desk.com/api/v2/cases/59
+      - https://spreecommerce.desk.com/api/v2/cases/63
       Status:
       - 201 Created
       Vary:
@@ -89,16 +93,16 @@ http_interactions:
       X-Rate-Limit-Remaining:
       - '58'
       X-Rate-Limit-Reset:
-      - '33'
+      - '9'
       X-Request-Id:
-      - 301761e8e4f8cbaf6f6e12b80693a284
+      - 09b27b8542586f7393a87aeddc172b5a
       Content-Length:
       - '797'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"external_id":null,"subject":"Invalid China Order","priority":4,"locked_until":null,"description":null,"status":"new","type":"email","labels":[],"language":"en","active_at":null,"created_at":"2013-10-18T14:17:27Z","updated_at":"2013-10-18T14:17:28Z","received_at":"2013-10-18T14:17:27Z","custom_fields":{},"_links":{"self":{"href":"/api/v2/cases/59","class":"case"},"message":{"href":"/api/v2/cases/59/message","class":"email"},"customer":{"href":"/api/v2/customers/124505162","class":"customer"},"assigned_user":null,"assigned_group":{"href":"/api/v2/groups/365542","class":"group"},"locked_by":null,"replies":{"href":"/api/v2/cases/59/replies","class":"reply"},"notes":{"href":"/api/v2/cases/59/notes","class":"note"},"attachments":{"href":"/api/v2/cases/59/attachments","class":"attachment"}}}'
+      string: '{"external_id":null,"subject":"Invalid China Order","priority":4,"locked_until":null,"description":null,"status":"new","type":"email","labels":[],"language":"en","active_at":null,"created_at":"2013-10-18T15:37:51Z","updated_at":"2013-10-18T15:37:51Z","received_at":"2013-10-18T15:37:51Z","custom_fields":{},"_links":{"self":{"href":"/api/v2/cases/63","class":"case"},"message":{"href":"/api/v2/cases/63/message","class":"email"},"customer":{"href":"/api/v2/customers/123695819","class":"customer"},"assigned_user":null,"assigned_group":{"href":"/api/v2/groups/365542","class":"group"},"locked_by":null,"replies":{"href":"/api/v2/cases/63/replies","class":"reply"},"notes":{"href":"/api/v2/cases/63/notes","class":"note"},"attachments":{"href":"/api/v2/cases/63/attachments","class":"attachment"}}}'
     http_version: 
-  recorded_at: Fri, 18 Oct 2013 14:17:29 GMT
+  recorded_at: Fri, 18 Oct 2013 15:37:53 GMT
 recorded_with: VCR 2.6.0

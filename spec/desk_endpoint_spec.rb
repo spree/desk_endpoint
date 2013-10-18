@@ -40,14 +40,4 @@ describe DeskEndpoint do
       last_response.body.should match /Case created/
     end
   end
-
-  it "should respond to POST info notification import" do
-    info_notification_payload['payload']['parameters'] = params
-
-    VCR.use_cassette('info_notification_import') do
-      post '/import', info_notification_payload.to_json, auth
-      last_response.status.should == 200
-      last_response.body.should match /Case created/
-    end
-  end
 end
