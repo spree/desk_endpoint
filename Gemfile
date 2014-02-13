@@ -1,7 +1,10 @@
 source 'https://www.rubygems.org'
 
-gem 'endpoint_base', :git => 'git@github.com:spree/endpoint_base.git', :ref => '20ff4efcd2d7'
 gem 'httparty'
+
+gem 'sinatra'
+gem 'tilt', '~> 1.4.1'
+gem 'tilt-jbuilder', require: 'sinatra/jbuilder'
 
 group :test do
   gem 'vcr'
@@ -20,3 +23,4 @@ group :production do
 end
 
 gem 'pry', group: :development
+gem 'endpoint_base', :git => 'git@github.com:spree/endpoint_base.git', :branch => 'v5'
