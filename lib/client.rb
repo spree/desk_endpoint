@@ -1,12 +1,14 @@
 class Client
   include HTTParty
 
-  attr_reader :config, :auth, :message, :payload, :customer_url
+  attr_reader :config, :auth, :payload, :customer_url
 
-  def initialize(configuration, message, payload)
+  def initialize(configuration, payload)
     @config = configuration
-    @auth = { username: configuration['desk.username'], password: configuration['desk.password'] }
-    @message = message
+    @auth = {
+      username: configuration['desk_username'],
+      password: configuration['desk_password']
+    }
     @payload = payload
   end
 
@@ -21,7 +23,7 @@ class Client
       body: case_params.to_json,
       basic_auth: auth
     }
-    response = self.class.post("#{config['desk.url']}/api/v2/cases", options)
+    response = self.class.post("#{config['desk_url']}/api/v2/cases", options)
     if validate_response(response)
       response
     end
@@ -30,9 +32,9 @@ class Client
   def get_customer
     options = {
       basic_auth: auth,
-      body: { email: config['desk.customer_email'] }.to_json
+      body: { email: config['desk_customer_email'] }.to_json
     }
-    response = self.class.get("#{config['desk.url']}/api/v2/customers/search", options)
+    response = self.class.get("#{config['desk_url']}/api/v2/customers/search", options)
     if validate_response(response)
       begin
         response["_embedded"]["entries"].first["_links"]["self"]["href"]
@@ -56,7 +58,7 @@ class Client
         ]
       }.to_json
     }
-    response = self.class.post("#{config['desk.url']}/api/v2/customers", options)
+    response = self.class.post("#{config['desk_url']}/api/v2/customers", options)
     if validate_response(response)
       response["_links"]["self"]["href"]
     end
@@ -90,7 +92,7 @@ class Client
     {
       direction: 'in',
       to: config['desk.to_email'],
-      from: "#{config['desk.requester_name']} (#{config['desk.requester_email']})",
+      from: "#{config['desk_requester_name']} (#{config['desk_requester_email']})",
       subject: payload['subject'],
       body: payload['description']
     }

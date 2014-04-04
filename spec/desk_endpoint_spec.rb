@@ -1,28 +1,33 @@
 require 'spec_helper'
 
 describe DeskEndpoint do
-  def auth
-    {'HTTP_X_AUGURY_TOKEN' => 'x123', "CONTENT_TYPE" => "application/json"}
-  end
-
   def app
     described_class
   end
 
-  let(:error_notification_payload) { { "message" => "notification:error", "message_id" => "518726r84910515003", "payload" => { "subject" => "Invalid China Order", "description" => "This order is shipping to China but was invalidly sent to PCH" } } }
-  let(:warning_notification_payload) { { "message" => "notification:warn", "message_id" => "518726r84910515004", "payload" => { "subject" => "Item out of stock", "description" => "This products requested in this order are not in stock." } } }
-  let(:info_notification_payload) { { "message" => "notification:info", "message_id" => "518726r84910515005", "payload" => { "subject" => "Order Received", "description" => "You have received an order." } } }
+  let(:error_notification_payload) do
+    { "subject" => "Invalid China Order", "description" => "This order is shipping to China but was invalidly sent to PCH" }
+  end
 
-  params = [
-      { 'name' => 'desk.username', 'value' => 'user@spreecommerce.com' },
-      { 'name' => 'desk.password', 'value' => 'foobar' },
-      { 'name' => 'desk.url', 'value' => 'https://spreecommerce.desk.com' },
-      { 'name' => 'desk.requester_name', 'value' => 'Spree Integrator' },
-      { 'name' => 'desk.requester_email', 'value' => 'support@spreecommerce.com' },
-      { 'name' => 'desk.to_email', 'value' => 'user@spreecommerce.com' } ]
+  let(:warning_notification_payload) do
+    { "subject" => "Item out of stock", "description" => "This products requested in this order are not in stock." }
+  end
+
+  let(:info_notification_payload) do
+    { "subject" => "Order Received", "description" => "You have received an order." }
+  end
+
+  params = {
+      'desk_username' => 'user@spreecommerce.com',
+      'desk_password' => 'foobar',
+      'desk_url' => 'https://spreecommerce.desk.com',
+      'desk_requester_name' => 'Spree Integrator',
+      'desk_requester_email' => 'support@spreecommerce.com',
+      'desk_to_email' => 'user@spreecommerce.com'
+  }
 
   it "should respond to POST error notification import" do
-    error_notification_payload['payload']['parameters'] = params
+    error_notification_payload['parameters'] = params
 
     VCR.use_cassette('error_notification_import') do
       post '/import', error_notification_payload.to_json, auth
@@ -32,7 +37,7 @@ describe DeskEndpoint do
   end
 
   it "should respond to POST warning notification import" do
-    warning_notification_payload['payload']['parameters'] = params
+    warning_notification_payload['parameters'] = params
 
     VCR.use_cassette('warning_notification_import') do
       post '/import', warning_notification_payload.to_json, auth
