@@ -32,7 +32,7 @@ describe DeskEndpoint do
     VCR.use_cassette('error_notification_import') do
       post '/import', error_notification_payload.to_json, auth
       last_response.status.should == 200
-      last_response.body.should match /Case created/
+      last_response.body.should match /New Desk case/
     end
   end
 
@@ -42,7 +42,7 @@ describe DeskEndpoint do
     VCR.use_cassette('warning_notification_import') do
       post '/import', warning_notification_payload.to_json, auth
       last_response.status.should == 200
-      last_response.body.should match /Case created/
+      last_response.body.should match /New Desk case/
     end
   end
 end
