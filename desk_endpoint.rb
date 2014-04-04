@@ -4,7 +4,7 @@ require "endpoint_base"
 require_relative './lib/client'
 
 class DeskEndpoint < EndpointBase::Sinatra::Base
-  post '/import' do
+  post '/create_ticket' do
     begin
       client = Client.new(@config, @payload)
       new_case = client.import
