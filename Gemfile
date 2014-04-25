@@ -6,6 +6,7 @@ gem 'tilt-jbuilder', require: 'sinatra/jbuilder'
 
 gem 'endpoint_base', github: 'spree/endpoint_base'
 gem 'httparty'
+gem 'honeybadger'
 
 group :test do
   gem 'vcr'
