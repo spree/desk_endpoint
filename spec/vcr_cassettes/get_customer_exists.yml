@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://user%40spreecommerce.com:foobar@spreecommerce.desk.com/api/v2/customers/search
+    uri: https://hub%40spreecommerce.com:foobar@spreecommerce.desk.com/api/v2/customers/search
     body:
       encoding: UTF-8
       string: '{"email":"hub@spreecommerce.com"}'
@@ -19,15 +19,15 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 18 Oct 2013 15:47:17 GMT
+      - Wed, 21 May 2014 14:31:05 GMT
       Etag:
-      - '"7362e2e15b02f5a5d256f0ee96e33d3e"'
+      - '"a47c52e7eea944e14332dc32a20d98e5"'
       Status:
       - 200 OK
       Vary:
       - X-AppVersion
       X-Appversion:
-      - '11.9'
+      - '15.99'
       X-Frame-Options:
       - SAMEORIGIN
       X-Rate-Limit-Limit:
@@ -35,17 +35,17 @@ http_interactions:
       X-Rate-Limit-Remaining:
       - '59'
       X-Rate-Limit-Reset:
-      - '43'
+      - '55'
       X-Request-Id:
-      - 72a1100e74426b6a2ee75787c1618977
+      - 024614a25092b8d9fc50ae07287e3b00
       Content-Length:
-      - '978'
+      - '1262'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"total_entries":1,"_links":{"self":{"href":"/api/v2/customers/search?email=hub%40spreecommerce.com&page=1&per_page=20","class":"page"},"first":{"href":"/api/v2/customers/search?email=hub%40spreecommerce.com&page=1&per_page=20","class":"page"},"last":{"href":"/api/v2/customers/search?email=hub%40spreecommerce.com&page=1&per_page=20","class":"page"},"previous":null,"next":null},"_embedded":{"entries":[{"first_name":"Spree
-        Commerce","last_name":"Hub","company":"spreecommerce.com","title":"","external_id":null,"background":"","language":null,"locked_until":null,"created_at":"2013-10-17T16:13:14Z","updated_at":"2013-10-18T14:11:51Z","custom_fields":{},"emails":[{"type":"home","value":"hub@spreecommerce.com"}],"phone_numbers":[],"addresses":[],"_links":{"self":{"href":"/api/v2/customers/124271370","class":"customer"},"locked_by":null,"company":{"href":"/api/v2/companies/9163384","class":"company"},"cases":{"href":"/api/v2/customers/124271370/cases","class":"case"}}}]}}'
+      string: '{"total_entries":1,"page":1,"_links":{"self":{"href":"/api/v2/customers/search?email=hub%40spreecommerce.com&page=1&per_page=20","class":"page"},"first":{"href":"/api/v2/customers/search?email=hub%40spreecommerce.com&page=1&per_page=20","class":"page"},"last":{"href":"/api/v2/customers/search?email=hub%40spreecommerce.com&page=1&per_page=20","class":"page"},"previous":null,"next":null},"_embedded":{"entries":[{"id":124271370,"first_name":"Spree
+        Commerce","last_name":"Hub","company":"spreecommerce.com","title":"","avatar":"http://www.gravatar.com/avatar/86c7d8468b54a8d1569a502df6ec6b18?default=https%3A%2F%2Fd218iqt4mo6adh.cloudfront.net%2Fassets%2Funknown_user_50-521aae04e00222d7dd814e72d7d869d0.png&rating=PG&size=50","external_id":null,"background":"","language":null,"locked_until":null,"created_at":"2013-10-17T16:13:14Z","updated_at":"2013-10-18T17:55:52Z","custom_fields":{},"emails":[{"type":"home","value":"hub@spreecommerce.com"}],"phone_numbers":[],"addresses":[],"_links":{"self":{"href":"/api/v2/customers/124271370","class":"customer"},"locked_by":null,"company":{"href":"/api/v2/companies/9163384","class":"company"},"facebook_user":null,"twitter_user":null,"cases":{"href":"/api/v2/customers/124271370/cases","class":"case","count":6}}}]}}'
     http_version: 
-  recorded_at: Fri, 18 Oct 2013 15:47:19 GMT
+  recorded_at: Wed, 21 May 2014 14:31:05 GMT
 recorded_with: VCR 2.6.0

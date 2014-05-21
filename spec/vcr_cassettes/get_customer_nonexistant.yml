@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://user%40spreecommerce.com:foobar@spreecommerce.desk.com/api/v2/customers/search
+    uri: https://hub%40spreecommerce.com:foobar@spreecommerce.desk.com/api/v2/customers/search
     body:
       encoding: UTF-8
       string: '{"email":"hub992@spreecommerce.com"}'
@@ -19,32 +19,32 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 18 Oct 2013 17:27:40 GMT
+      - Wed, 21 May 2014 14:31:05 GMT
       Etag:
-      - '"4c33772aa7aff239fa62a75a90c7ab20"'
+      - '"54b938cc8d8a0dd0effff8c593feb556"'
       Status:
       - 200 OK
       Vary:
       - X-AppVersion
       X-Appversion:
-      - '11.9'
+      - '15.99'
       X-Frame-Options:
       - SAMEORIGIN
       X-Rate-Limit-Limit:
       - '60'
       X-Rate-Limit-Remaining:
-      - '59'
+      - '58'
       X-Rate-Limit-Reset:
-      - '20'
+      - '55'
       X-Request-Id:
-      - 44c31a9b5cf9b278c7c9146b4f3aee9c
+      - 822d78b8aebe2be93e417846c178a383
       Content-Length:
-      - '416'
+      - '425'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"total_entries":0,"_links":{"self":{"href":"/api/v2/customers/search?email=hub992%40spreecommerce.com&page=1&per_page=20","class":"page"},"first":{"href":"/api/v2/customers/search?email=hub992%40spreecommerce.com&page=1&per_page=20","class":"page"},"last":{"href":"/api/v2/customers/search?email=hub992%40spreecommerce.com&page=1&per_page=20","class":"page"},"previous":null,"next":null},"_embedded":{"entries":[]}}'
+      string: '{"total_entries":0,"page":1,"_links":{"self":{"href":"/api/v2/customers/search?email=hub992%40spreecommerce.com&page=1&per_page=20","class":"page"},"first":{"href":"/api/v2/customers/search?email=hub992%40spreecommerce.com&page=1&per_page=20","class":"page"},"last":{"href":"/api/v2/customers/search?email=hub992%40spreecommerce.com&page=1&per_page=20","class":"page"},"previous":null,"next":null},"_embedded":{"entries":[]}}'
     http_version: 
-  recorded_at: Fri, 18 Oct 2013 17:27:42 GMT
+  recorded_at: Wed, 21 May 2014 14:31:05 GMT
 recorded_with: VCR 2.6.0

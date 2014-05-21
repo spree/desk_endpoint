@@ -53,7 +53,7 @@ class Client
         emails: [
           {
             type: "work",
-            value: config['desk.customer_email']
+            value: config['desk_customer_email']
           }
         ]
       }.to_json
@@ -79,6 +79,7 @@ class Client
       type: 'email',
       subject: payload['subject'],
       message: message_params,
+      status: 'new',
       '_links' => {
         customer: {
           href: "#{customer_url}",
@@ -91,10 +92,11 @@ class Client
   def message_params
     {
       direction: 'in',
-      to: config['desk.to_email'],
+      to: config['desk_to_email'],
       from: "#{config['desk_requester_name']} (#{config['desk_requester_email']})",
       subject: payload['subject'],
-      body: payload['description']
+      body: payload['description'],
+      status: "received"
     }
   end
 

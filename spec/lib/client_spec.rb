@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Client do
   let(:configuration) do
     {
-      'desk_username' => 'user@spreecommerce.com',
+      'desk_username' => 'hub@spreecommerce.com',
       'desk_password' => 'foobar',
       'desk_url' => 'https://spreecommerce.desk.com',
       'desk_requester_name' => 'Spree Commerce Hub',
@@ -46,7 +46,7 @@ describe Client do
 
   describe "#create_customer" do
     it "returns the newly created customer's url" do
-      configuration['desk_customer_email'] = 'hub900@spreecommerce.com'
+      configuration['desk_customer_email'] = 'hub901@spreecommerce.com'
       VCR.use_cassette('create_customer') do
         response = subject.create_customer
         response.should =~ /api\/v2\/customers/
@@ -63,7 +63,7 @@ describe Client do
 
   describe "#create_case" do
     it "creates a new case" do
-      subject.should_receive(:customer_url).and_return('/api/v2/customers/124271370')
+      subject.should_receive(:customer_url).and_return('/api/v2/customers/199586920')
       configuration['desk_customer_email'] = 'hub@spreecommerce.com'
 
       VCR.use_cassette('create_case') do

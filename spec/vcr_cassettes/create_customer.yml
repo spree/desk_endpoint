@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://user%40spreecommerce.com:foobar@spreecommerce.desk.com/api/v2/customers
+    uri: https://hub%40spreecommerce.com:foobar@spreecommerce.desk.com/api/v2/customers
     body:
       encoding: UTF-8
-      string: '{"first_name":"Spree Commerce","last_name":"Hub","emails":[{"type":"work","value":"hub900@spreecommerce.com"}]}'
+      string: '{"first_name":"Spree Commerce","last_name":"Hub","emails":[{"type":"work","value":"hub901@spreecommerce.com"}]}'
     headers: {}
   response:
     status:
@@ -19,34 +19,34 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 18 Oct 2013 15:50:53 GMT
+      - Wed, 21 May 2014 14:35:58 GMT
       Etag:
-      - '"801379b74c0697f1a510a873b86c41db"'
+      - '"9c6f5e9e665265b61adef9aa9bfd405d"'
       Location:
-      - https://spreecommerce.desk.com/api/v2/customers/124525778
+      - https://spreecommerce.desk.com/api/v2/customers/199586920
       Status:
       - 201 Created
       Vary:
       - X-AppVersion
       X-Appversion:
-      - '11.9'
+      - '15.99'
       X-Frame-Options:
       - SAMEORIGIN
       X-Rate-Limit-Limit:
       - '60'
       X-Rate-Limit-Remaining:
-      - '59'
+      - '58'
       X-Rate-Limit-Reset:
-      - '7'
+      - '2'
       X-Request-Id:
-      - a66dfc65ca2da0c8ae0d223385ec24d4
+      - 761995724d78ce6690f9f45d999b4a37
       Content-Length:
-      - '498'
+      - '773'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"first_name":"Spree Commerce","last_name":"Hub","company":null,"title":null,"external_id":null,"background":null,"language":null,"locked_until":null,"created_at":"2013-10-18T15:50:53Z","updated_at":"2013-10-18T15:50:53Z","custom_fields":{},"emails":[{"type":"work","value":"hub900@spreecommerce.com"}],"phone_numbers":[],"addresses":[],"_links":{"self":{"href":"/api/v2/customers/124525778","class":"customer"},"locked_by":null,"cases":{"href":"/api/v2/customers/124525778/cases","class":"case"}}}'
+      string: '{"id":199586920,"first_name":"Spree Commerce","last_name":"Hub","company":null,"title":null,"avatar":"http://www.gravatar.com/avatar/4fd13a62977b47e67a4162a82aae70a3?default=https%3A%2F%2Fd218iqt4mo6adh.cloudfront.net%2Fassets%2Funknown_user_50-521aae04e00222d7dd814e72d7d869d0.png&rating=PG&size=50","external_id":null,"background":null,"language":null,"locked_until":null,"created_at":"2014-05-21T14:35:58Z","updated_at":"2014-05-21T14:35:58Z","custom_fields":{},"emails":[{"type":"work","value":"hub901@spreecommerce.com"}],"phone_numbers":[],"addresses":[],"_links":{"self":{"href":"/api/v2/customers/199586920","class":"customer"},"locked_by":null,"facebook_user":null,"twitter_user":null,"cases":{"href":"/api/v2/customers/199586920/cases","class":"case","count":0}}}'
     http_version: 
-  recorded_at: Fri, 18 Oct 2013 15:50:54 GMT
+  recorded_at: Wed, 21 May 2014 14:35:58 GMT
 recorded_with: VCR 2.6.0

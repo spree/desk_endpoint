@@ -8,7 +8,7 @@ class DeskEndpoint < EndpointBase::Sinatra::Base
   end
 
   post '/create_ticket' do
-    client = Client.new(@config, @payload)
+    client = Client.new(@config, @payload[:ticket])
     new_case = client.import
 
     result 200, "New Desk case '#{new_case['subject']}' created, priority: #{new_case['priority']}."

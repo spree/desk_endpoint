@@ -6,19 +6,19 @@ describe DeskEndpoint do
   end
 
   let(:error_notification_payload) do
-    { "subject" => "Invalid China Order", "description" => "This order is shipping to China but was invalidly sent to PCH" }
+    { "ticket" => { "subject" => "Invalid China Order", "description" => "This order is shipping to China but was invalidly sent to PCH" } }
   end
 
   let(:warning_notification_payload) do
-    { "subject" => "Item out of stock", "description" => "This products requested in this order are not in stock." }
+    { "ticket" => { "subject" => "Item out of stock", "description" => "This products requested in this order are not in stock." } }
   end
 
   let(:info_notification_payload) do
-    { "subject" => "Order Received", "description" => "You have received an order." }
+    { "ticket" => { "subject" => "Order Received", "description" => "You have received an order." } }
   end
 
   params = {
-      'desk_username' => 'user@spreecommerce.com',
+      'desk_username' => 'hub@spreecommerce.com',
       'desk_password' => 'foobar',
       'desk_url' => 'https://spreecommerce.desk.com',
       'desk_requester_name' => 'Spree Integrator',
